@@ -26,14 +26,14 @@ public:
 #define N2 32
 
 // Nano Analog Pins
-#define B7 22
-#define B6 19
-#define B5 28
-#define B4 27
-#define B3 26
-#define B2 25
-#define B1 24
-#define B0 23
+#define M7 22
+#define M6 19
+#define M5 28
+#define M4 27
+#define M3 26
+#define M2 25
+#define M1 24
+#define M0 23
 
 
 

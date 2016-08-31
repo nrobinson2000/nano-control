@@ -29,4 +29,4 @@ void loop()
 }
 ```
 
-**NanoMaster** has constants for the Arduino Nano pins.  Pins beginning with `N` are digital pins.  For example, `N13` would go to `D13`.  Pins beginning with `B` are analog pins.  `B7` would go to pin `A7` on the Nano.
+**NanoMaster** has constants for the Arduino Nano pins.  Pins beginning with `N` are digital pins.  For example, `N13` would go to `D13`.  Pins beginning with `M` are analog pins.  `M7` would go to pin `A7` on the Nano.
