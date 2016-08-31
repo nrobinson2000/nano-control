@@ -4,10 +4,10 @@ NanoSlave nano;
 
 void setup()
 {
-nano.begin();
+    nano.begin();
 }
 
 void loop()
 {
-nano.process();
+    nano.process();
 }

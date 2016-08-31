@@ -9,7 +9,7 @@ The purpose of **nano-control** is to expand the number of usable pins on a Part
 
 **NanoMaster** allows the Photon to command the Nano to write to specific pins and read from specific pins over Serial.  It supports: `digitalWrite`, `digitalRead`, `analogWrite`, and `analogRead`, and makes it easy to control pins.
 
-For example, this would make the Nano blink its LED:
+For example, this would make the Photon make the Nano blink its LED:
 ```cpp
 #include "application.h"
 #include "NanoMaster.h"
@@ -18,15 +18,32 @@ NanoMaster nano;
 
 void setup()
 {
-  nano.begin();
+    nano.begin();
 }
 
 void loop()
 {
-  nano.digitalWrite(N13, HIGH);
-  delay(1000);
-  nano.digitalWrite(N13, LOW);
-  delay(1000);
+    nano.digitalWrite(N13, HIGH);
+    delay(1000);
+    nano.digitalWrite(N13, LOW);
+    delay(1000);
+}
+```
+
+This is all that would be on the Nano:
+```cpp
+#include <NanoSlave.h>
+
+NanoSlave nano;
+
+void setup()
+{
+    nano.begin();
+}
+
+void loop()
+{
+    nano.process();
 }
 ```
 
