@@ -1,5 +1,5 @@
 # nano-control
-***WORK IN PROGRESS***
+***THIS PROJECT IS A WORK IN PROGRESS.***
 
 Control an Arduino Nano as if it was part of a Particle Device.  Inspired by [Tinker](https://docs.particle.io/guide/getting-started/examples/photon/#tinker), which allows you to control a Particle device through the Particle Mobile app.
 
