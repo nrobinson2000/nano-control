@@ -5,4 +5,26 @@ The purpose of **nano-control** is to expand the number of usable pins on a Part
 
 **Nano-control** consists of two libraries.  One called `NanoMaster` that runs on a Particle Device, and one called `NanoSlave` that runs on an Arduino Nano.
 
-`NanoMaster` allows the Photon to command the Nano to write to specific pins and read from specific pins over Serial.  It supports: `digitalWrite`, `digitalRead`, `analogWrite`, and `analogRead`.
+`NanoMaster` allows the Photon to command the Nano to write to specific pins and read from specific pins over Serial.  It supports: `digitalWrite`, `digitalRead`, `analogWrite`, and `analogRead`, and makes it easy to control pins.
+
+For example, this would make the Nano blink its LED:
+```cpp
+#include "application.h"
+
+NanoMaster nano;
+
+void setup()
+{
+  nano.begin();
+}
+
+void loop()
+{
+  nano.digitalWrite(N13, HIGH);
+  delay(1000);
+  nano.digitalWrite(N13, LOW);
+  delay(1000);
+}
+```
+
+**NanoMaster** has constants for the Arduino Nano pins.  Pins beginning with `N` are digital pins.  For example, `N13` would go to `D13`.  Pins beginning with `B` are analog pins.  `B7` would go to pin `A7` on the Nano.
