@@ -13,6 +13,7 @@ For example, this would make the Nano blink its LED:
 ```cpp
 #include "application.h"
 #include "NanoMaster.h"
+
 NanoMaster nano;
 
 void setup()
