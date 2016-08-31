@@ -12,7 +12,7 @@ The purpose of **nano-control** is to expand the number of usable pins on a Part
 For example, this would make the Nano blink its LED:
 ```cpp
 #include "application.h"
-
+#include "NanoMaster.h"
 NanoMaster nano;
 
 void setup()
