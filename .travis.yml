@@ -1,7 +1,10 @@
 sudo: required
 
+cache:
+    directories:
+        - "~/.platformio"
 install:
-  - ./test.sh
+  - ./install.sh
 
 script:
   - particle compile photon particle/firmware/
