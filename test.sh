@@ -9,7 +9,7 @@ sudo npm install -g particle-cli  > /dev/null
 echo "Installing platformio..."
 echo
 sudo pip install -U platformio  > /dev/null
-export PARTICLE_PATH="!(which particle)" > /dev/null
+which particle
 echo "Logging into particle-cli..."
 echo
 ./particle-cli-login.sh $email $pass $PARTICLE_PATH  > /dev/null
