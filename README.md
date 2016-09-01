@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nrobinson2000/nano-control.svg?branch=master)](https://travis-ci.org/nrobinson2000/nano-control)
+
 # nano-control
 ***THIS PROJECT IS A WORK IN PROGRESS.***
 
