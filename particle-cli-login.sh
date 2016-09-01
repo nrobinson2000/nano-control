@@ -6,7 +6,6 @@ set user [lindex $argv 0]
 
 set password [lindex $argv 1]
 
-set particle [lindex $argv 2]
 
 spawn particle cloud login
 

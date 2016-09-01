@@ -11,4 +11,4 @@ echo
 sudo -H pip install -U platformio
 echo "Logging into particle-cli..."
 echo
-./particle-cli-login.sh $email $pass $PARTICLE_PATH  > /dev/null
+./particle-cli-login.sh $email $pass  > /dev/null
