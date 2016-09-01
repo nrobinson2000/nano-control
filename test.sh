@@ -5,11 +5,10 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  > /dev/null
 sudo apt-get install -y nodejs expect  > /dev/null
 echo "Installing particle-cli..."
 echo
-sudo npm install -g particle-cli  > /dev/null
+sudo npm install -g particle-cli serialport  > /dev/null
 echo "Installing platformio..."
 echo
 sudo pip install -HU platformio  > /dev/null
-which particle
 echo "Logging into particle-cli..."
 echo
 ./particle-cli-login.sh $email $pass $PARTICLE_PATH  > /dev/null
