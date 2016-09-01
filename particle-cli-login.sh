@@ -6,7 +6,6 @@ set user [lindex $argv 0]
 
 set password [lindex $argv 1]
 
-
 spawn particle cloud login
 
 log_user 0
