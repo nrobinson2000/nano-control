@@ -8,7 +8,7 @@ echo
 sudo npm install -g particle-cli serialport  > /dev/null
 echo "Installing platformio..."
 echo
-sudo pip install -HU platformio  > /dev/null
+sudo -H pip install -U platformio  > /dev/null
 echo "Logging into particle-cli..."
 echo
 ./particle-cli-login.sh $email $pass $PARTICLE_PATH  > /dev/null
