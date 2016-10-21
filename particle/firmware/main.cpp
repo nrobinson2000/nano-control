@@ -14,4 +14,16 @@ void loop() // Put code here to loop forever
     delay(1000);
     nano.digitalWrite(N13, LOW);
     delay(1000);
+    
+/*delay(100);
+    if (nano.digitalRead(N12) == HIGH)
+    {
+      pinMode(D7, OUTPUT);
+      digitalWrite(D7, HIGH);
+    }
+    else
+    {
+      pinMode(D7, OUTPUT);
+      digitalWrite(D7, LOW);
+    }*/
 }

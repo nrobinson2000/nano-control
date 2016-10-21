@@ -12,35 +12,35 @@ public:
   NanoMaster();
 
 // Nano Digital Pins
-#define N13 17
-#define N12 16
-#define N11 15
-#define N10 14
-#define N9 13
-#define N8 12
-#define N7 11
-#define N6 10
-#define N5 9
-#define N4 2
-#define N3 1
-#define N2 32
+#define N13 13
+#define N12 12
+#define N11 11
+#define N10 10
+#define N9 9
+#define N8 8
+#define N7 7
+#define N6 6
+#define N5 5
+#define N4 4
+#define N3 3
+#define N2 2
 
 // Nano Analog Pins
-#define M7 22
-#define M6 19
-#define M5 28
-#define M4 27
-#define M3 26
-#define M2 25
-#define M1 24
-#define M0 23
+#define M7 21
+#define M6 20
+#define M5 19
+#define M4 18
+#define M3 17
+#define M2 16
+#define M1 15
+#define M0 14
 
 
 
   bool begin();
   bool process();
   bool digitalWrite(int pin, int value);
-  bool digitalRead(int pin);
+  int digitalRead(int pin);
   bool analogWrite(int pin, int value);
   int analogRead(int pin);
 

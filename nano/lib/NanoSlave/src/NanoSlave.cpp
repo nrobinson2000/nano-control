@@ -27,11 +27,20 @@ bool NanoSlave::begin()
 bool NanoSlave::process()
 {
     String input = "";
-    if (Serial.available() > 0)
-    {
-        delay(3);
-        input += Serial.read();
-    }
+
+    while (Serial.available() > 0) // While receiving characters over serial...
+     {
+       char c = Serial.read(); // Read the character
+       input += c; // Add the character to the string
+       delay(2); // Necessary delay
+     }
+
+     input.trim();
+
+     if (input.length() == 0)
+     {
+       return false;
+     }
 
     String command = String(input.charAt(0));
 
@@ -42,7 +51,7 @@ bool NanoSlave::process()
         String valueString = input.substring(4);
         valueString.trim();
         int pin = pinString.toInt();
-        int value = pinString.toInt();
+        int value = valueString.toInt();
         pinMode(pin, OUTPUT);
         digitalWrite(pin, value);
     }
@@ -53,8 +62,7 @@ bool NanoSlave::process()
         pinString.trim();
         int pin = pinString.toInt();
         pinMode(pin, INPUT);
-        String output = String(digitalRead(pin));
-        Serial.println(output);
+        Serial.println(String(digitalRead(pin)));
     }
 
     if (command == "2") //analogWrite
@@ -64,7 +72,7 @@ bool NanoSlave::process()
         String valueString = input.substring(4);
         valueString.trim();
         int pin = pinString.toInt();
-        int value = pinString.toInt();
+        int value = valueString.toInt();
         pinMode(pin, OUTPUT);
         analogWrite(pin, value);
     }
